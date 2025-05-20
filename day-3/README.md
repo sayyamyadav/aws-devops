@@ -137,3 +137,37 @@ Differentiating between On-Demand, Reserved, and Spot instances.
 - Starting, stopping, and terminating instances.
 - Monitoring instance performance and utilization.
 - Basic troubleshooting and accessing instances using SSH (Secure Shell).
+
+```
+Region (AWS Region):
+A Region is a geographical location in the world where AWS has a cluster of data centers.
+
+Each Region is isolated and independent to ensure the highest possible fault tolerance and stability.
+
+Example Regions:
+
+us-east-1 (N. Virginia)
+
+ap-south-1 (Mumbai)
+
+eu-west-1 (Ireland)
+
+🔹 Key Points:
+Each Region has multiple Availability Zones.
+
+Regions help with data residency, latency, and regulatory compliance.
+```
+```
+Availability Zone (AZ):
+An Availability Zone is a physically separate data center (or group of data centers) within a Region.
+
+Each AZ has independent power, cooling, and networking, but they are interconnected through low-latency links.
+
+Example: ap-south-1a, ap-south-1b, ap-south-1c are AZs in the Mumbai Region.
+
+🔹 Key Points:
+Using multiple AZs provides high availability and fault tolerance.
+
+If one AZ fails, services in another AZ can continue running.
+```
+
