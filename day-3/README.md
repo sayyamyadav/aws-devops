@@ -1,11 +1,17 @@
 # What will you learn 
 
 ## Introduction to EC2:
-
+```
+most widey use and one of the most important service in aws here we understand what,why and types ,regions an az
+```
 What is EC2, and why is it important?
 
 ```
 - Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud.
+-elastic prefix whenever aws provide service that can be scale up and scale down acc to the requirements then aws use elastic prefix with the services name
+-it's virtual server
+- managment effort gone down by using ec2
+-it's pay-as-you go model which help organizations in order to maintain the cost
 - Access reliable, scalable infrastructure on demand. Scale capacity within minutes with SLA commitment of 99.99% availability.
 - Provide secure compute for your applications. Security is built into the foundation of Amazon EC2 with the AWS Nitro System.
 - Optimize performance and cost with flexible options like AWS Graviton-based instances, Amazon EC2 Spot instances, and AWS Savings Plans.
