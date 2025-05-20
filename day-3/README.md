@@ -170,7 +170,9 @@ Using multiple AZs provides high availability and fault tolerance.
 
 If one AZ fails, services in another AZ can continue running.
 ```
-Check	Scenario	Status Code
-EC2 host hardware failed	AWS can't reach the instance	0/2
-OS crashed, but hardware is fine	Instance failed to boot correctly	1/2
-Everything is running correctly	OS + Hardware = Good	2/2
+| **Check**                        | **Scenario**                      | **Status Code** |
+| -------------------------------- | --------------------------------- | --------------- |
+| EC2 host hardware failed         | AWS can't reach the instance      | `0/2`           |
+| OS crashed, but hardware is fine | Instance failed to boot correctly | `1/2`           |
+| Everything is running correctly  | OS + Hardware = Good              | `2/2`           |
+
