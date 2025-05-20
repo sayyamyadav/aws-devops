@@ -59,6 +59,68 @@ VPC Flow Logs
 VPN connections
 
     Connect your VPCs to your on-premises networks using AWS Virtual Private Network (AWS VPN).
+Here's a clear breakdown of the differences between:
+
+---
+
+## 🔄 NAT Gateway vs Transit Gateway
+
+| Feature               | **NAT Gateway**                                     | **Transit Gateway**                                         |
+| --------------------- | --------------------------------------------------- | ----------------------------------------------------------- |
+| **Purpose**           | Allow **private** instances to access the internet  | Central hub for connecting **multiple VPCs & on-prem**      |
+| **Use Case**          | Outbound internet access from private subnets       | Scalable network routing between VPCs, VPNs, Direct Connect |
+| **Direction**         | Only supports **outbound** traffic                  | Supports **bi-directional** routing                         |
+| **Applies To**        | Private EC2 instances (usually in a private subnet) | Multiple VPCs, on-prem networks, VPNs                       |
+| **Internet-bound?**   | Yes (egress only)                                   | Not necessarily (routing only)                              |
+| **Billing**           | Per GB and per-hour charge                          | Higher cost, charged by attachments and data processed      |
+| **Availability Zone** | AZ-specific (one per AZ or highly available config) | Region-wide; scales across AZs                              |
+
+### 🌐 Example:
+
+* **NAT Gateway**: A private EC2 instance in a subnet without a public IP wants to update software via the internet.
+* **Transit Gateway**: You have 5 VPCs and 1 on-prem data center; you want all to communicate efficiently through a central router.
+
+---
+
+## 🔐 NACL vs Security Group (with example)
+
+| Feature                    | **Network ACL (NACL)**                                 | **Security Group**                                    |
+| -------------------------- | ------------------------------------------------------ | ----------------------------------------------------- |
+| **Applies To**             | Subnets                                                | EC2 instances (ENIs)                                  |
+| **Stateless**              | ✅ Yes – you must define inbound **and** outbound rules | ❌ No – stateful (responses are automatically allowed) |
+| **Rule Evaluation**        | Rules are processed **in order**                       | Rules are **evaluated all together**                  |
+| **Default Action**         | Explicit **deny** if no rule matches                   | Implicit **deny** if no rule matches                  |
+| **Supports Allow & Deny?** | ✅ Yes                                                  | ❌ Only **Allow**                                      |
+| **Granularity**            | Coarser (applies to whole subnet)                      | Finer (applies to specific EC2 instance or ENI)       |
+
+### 📌 Example:
+
+#### NACL:
+
+You want to **block** all traffic from a malicious IP to a subnet:
+
+```text
+Rule #100 | Deny | Source IP: 203.0.113.1 | Port: ALL | Protocol: ALL | Direction: Inbound
+```
+
+#### Security Group:
+
+You want to allow **only port 22 (SSH)** to an EC2 instance from your office IP:
+
+```text
+Type: SSH | Protocol: TCP | Port: 22 | Source: 198.51.100.0/32
+```
+
+---
+
+### 🔑 Key Takeaways:
+
+* Use **NAT Gateway** for **internet access from private subnets**.
+* Use **Transit Gateway** for **connecting multiple VPCs and networks**.
+* Use **NACLs** for **broad subnet-level control**, especially when you need **deny rules**.
+* Use **Security Groups** for **instance-level control**, especially when you want **stateful, easy-to-manage rules**.
+
+Let me know if you want architecture diagrams for these.
 
 
 ## Resources 
