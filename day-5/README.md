@@ -11,7 +11,7 @@ AWS (Amazon Web Services) provides multiple layers of security to protect resour
         Security Groups are stateful, meaning that if an inbound rule allows traffic, the corresponding outbound traffic is automatically allowed, and vice versa.
         Changes made to security group rules take effect immediately.
 ```
-aws allow deafult all the outbound traffic except 25 port beacuse there can be a lot of spam activity
+aws allow deafult all the outbound traffic (means your server can access anything from the internet) except 25 port beacuse there can be a lot of spam activity
 Port 25 is the default port for sending email using SMTP (Simple Mail Transfer Protocol).
 
 If AWS allowed unrestricted access to port 25, malicious users could use EC2 instances to send massive amounts of spam, phishing emails, or malware.
