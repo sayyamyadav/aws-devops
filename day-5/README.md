@@ -34,6 +34,11 @@ Delivery problems for legitimate AWS customers
         They are stateless, which means that if an inbound rule allows traffic, the corresponding outbound traffic must be explicitly allowed using a separate outbound rule.
         Changes made to NACL rules may take some time to propagate to all the resources using the associated subnet.
 
+```
+on the subnet level we can apply additional layer with the alllow we can also add what kind of traffic you can deny like 0.0.0.0 so that it does'nt affect or risk the security of your server unintentionaly
+we cab use nacl for automation where instead of adding security to 100 server manually you can just at subnet level and it will apply to all the server
+```
+
 ## Project Implemented in the video
 
 
