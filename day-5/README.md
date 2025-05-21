@@ -10,6 +10,20 @@ AWS (Amazon Web Services) provides multiple layers of security to protect resour
         They operate at the instance level and evaluate the rules before allowing traffic to reach the instance.
         Security Groups are stateful, meaning that if an inbound rule allows traffic, the corresponding outbound traffic is automatically allowed, and vice versa.
         Changes made to security group rules take effect immediately.
+```
+aws allow deafult all the outbound traffic except 25 port beacuse there can be a lot of spam activity
+Port 25 is the default port for sending email using SMTP (Simple Mail Transfer Protocol).
+
+If AWS allowed unrestricted access to port 25, malicious users could use EC2 instances to send massive amounts of spam, phishing emails, or malware.
+
+This would lead to:
+
+Blacklisting of AWS IP addresses by major email providers (Gmail, Outlook, etc.)
+
+Reputation damage to AWS's global infrastructure
+
+Delivery problems for legitimate AWS customers
+```
 
     Network Access Control Lists (NACLs):
         NACLs are an additional layer of security that operates at the subnet level. They act as stateless traffic filters for inbound and outbound traffic at the subnet boundary.
