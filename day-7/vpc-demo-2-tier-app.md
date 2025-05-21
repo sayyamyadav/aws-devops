@@ -100,4 +100,75 @@ AWS Auto Scaling Group is an essential service for building resilient, scalable,
 
 ### Target Group
 
-### Bastion hosting or Jump Server
+## Bastion hosting or Jump Server
+it act as a meditor between a private subnet and a public subnet
+# Bastion Host (Jump Server) Documentation
+
+## 🔐 Overview
+
+A **Bastion Host** (also known as a **Jump Server**) is an EC2 instance that provides secure, controlled access to private instances and resources within a VPC from outside the network. It acts as a gateway to your private infrastructure, improving security and control.
+
+---
+
+## 🛡️ What It Does
+
+### 🔐 Secure Access
+
+Bastion hosts allow administrators to **securely access and manage private resources** (e.g., EC2, RDS) without exposing them directly to the public internet.
+
+### 🎯 Limited Attack Surface
+
+Centralizing access through a single bastion host helps to **significantly reduce the potential attack surface**, compared to exposing individual instances.
+
+### 📝 Auditing and Logging
+
+Bastion hosts can be configured to **log all SSH sessions**, providing a detailed audit trail of access events, supporting compliance and security.
+
+### 👥 Control and Management
+
+Access is typically **restricted to authorized users only**, often using key pairs or multi-factor authentication (MFA) for an additional layer of security.
+
+---
+
+## ⚙️ How It Works
+
+### 1. **Connect to the Bastion Host**
+
+Use SSH to connect to the bastion host's **public IP address** from your local machine.
+
+### 2. **Jump to Private Instance**
+
+Once connected to the bastion host, you can then **SSH into private instances** using their private IP addresses, effectively "jumping" through the bastion.
+
+### 🧪 Example Use Case
+
+To access a **private RDS instance**:
+
+1. Connect to the bastion host via SSH.
+2. From the bastion, SSH into the private RDS instance or use a database client to connect securely.
+
+---
+
+## ❓ Why Use a Bastion Host?
+
+### ✅ Security
+
+Drastically reduces the risk of unauthorized access to your private resources.
+
+### 📋 Compliance
+
+Facilitates auditing and session logging, helping to meet compliance requirements.
+
+### 🛠️ Centralized Management
+
+Simplifies user access control and management for sensitive infrastructure components.
+
+### 📉 Reduced Attack Surface
+
+Minimizes the number of access points exposed to the internet.
+
+---
+
+## 📎 Summary
+
+A **Bastion Host (Jump Server)** is a vital security tool within AWS, enabling controlled, secure access to private network resources. It helps you maintain a strong security posture while still allowing administrative access to internal services when needed.
