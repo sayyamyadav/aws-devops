@@ -1,7 +1,9 @@
 # Route53
 
 ```
-Amazon Route 53 is a DNS (Domain Name System) service provided by Amazon Web Services (AWS). It allows you to manage domain names, DNS records, and routing traffic based on various criteria, such as location, health checks, and latency, according to the AWS documentation. Route 53 is also used for domain registration and health checking, ensuring high availability and reliability of applications. 
+Amazon Route 53 is a DNS (Domain Name System) service provided by Amazon Web Services (AWS).
+-It allows you to manage domain names, DNS records, and routing traffic based on various criteria, such as location, health checks, and latency, according to the AWS documentation.
+-Route 53 is also used for domain registration and health checking, ensuring high availability and reliability of applications. 
 ```
 Key Concepts and Features:
 DNS Management:
