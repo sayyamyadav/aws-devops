@@ -12,7 +12,27 @@ AWS CloudFormation interprets templates and deploys the specified resources in t
 CFT acts as  a middlelayeer it take info from IAC FOLLOW principal of user(that written ya yaml or json) it convert that into a AWS api calls create a resources acc to that it is not for aws 
 for azyre there is azure cloudFormatiom
 
-two type of template
+it also support drift detection
+Drift happens when the actual state of your AWS resources is different from what is defined in your CloudFormation template.
+
+📌 Example:
+You deployed an S3 bucket using CloudFormation, but later:
+
+Someone manually changed the bucket's settings in the AWS Console or via CLI.
+
+Now your infrastructure has "drifted" from the original template — and CloudFormation doesn’t know unless you check.
+
+🧪 What Does Drift Detection Do?
+It checks your resources to see if they still match your CloudFormation template.
+
+✅ It tells you:
+Which resources have changed
+
+What exactly changed (e.g., tags, settings)
+
+Which ones are still in sync
+
+###two type of template
 1. 📜 Declarative
 You declare what you want, not how to get it.
 
