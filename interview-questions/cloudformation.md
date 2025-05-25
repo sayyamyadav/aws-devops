@@ -31,6 +31,12 @@ Revert to a version from 5 or 10 days ago.
 
 Use CI/CD pipelines to deploy infrastructure safely
 
+| Tool                     | What it does                             | When to use it                                                                                                     |
+| ------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **AWS CLI**              | Run AWS commands manually or in scripts  | ✅ Quick tasks<br>✅ Testing<br>✅ One-time setup<br>✅ Small automation                                               |
+| **CloudFormation (CFT)** | Automate infrastructure setup using code | ✅ Repeatable deployments<br>✅ Large environments<br>✅ Infrastructure as Code (IaC)<br>✅ Version control & rollback |
+
+
 ### 5. What is a CloudFormation stack?
 A CloudFormation stack is a collection of AWS resources created and managed as a single unit, based on a CloudFormation template.
 
