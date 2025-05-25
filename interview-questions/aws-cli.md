@@ -60,12 +60,9 @@ To uninstall the AWS CLI, you can use the package manager or the uninstaller pro
 
 ### 21 diff status code in ?
 Sure! Here's a **super simple way** to remember the **API status codes**, like a cheat sheet:
+ ✅ **STATUS CODE CHEAT SHEET (Easy to Remember)**
 
----
-
-## ✅ **STATUS CODE CHEAT SHEET (Easy to Remember)**
-
-### 🟢 **2xx – SUCCESS**
+🟢 **2xx – SUCCESS**
 
 > "Everything worked!"
 
@@ -73,9 +70,7 @@ Sure! Here's a **super simple way** to remember the **API status codes**, like a
 * **201** – Created (POST made something new)
 * **204** – No Content (It worked, but nothing to show)
 
----
-
-### ❗ **4xx – CLIENT ERROR**
+ ❗ **4xx – CLIENT ERROR**
 
 > "You did something wrong."
 
@@ -86,9 +81,7 @@ Sure! Here's a **super simple way** to remember the **API status codes**, like a
 * **405** – Method Not Allowed (You used the wrong action)
 * **429** – Too Many Requests (Slow down, you're spamming)
 
----
-
-### 🔥 **5xx – SERVER ERROR**
+ 🔥 **5xx – SERVER ERROR**
 
 > "The server messed up."
 
@@ -97,13 +90,10 @@ Sure! Here's a **super simple way** to remember the **API status codes**, like a
 * **503** – Service Unavailable (Server is overloaded or down)
 * **504** – Gateway Timeout (Server took too long)
 
----
 
 ### 🧠 Quick Trick to Remember:
 
 * **2xx** = ✅ You did it right
 * **4xx** = ❌ You messed up
 * **5xx** = 💥 Server messed up
-
----
 
