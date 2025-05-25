@@ -2,6 +2,9 @@
 
 ## About 
 
+### why s3
+it is solving very comman problem of strorage which we face on our day to day bases
+
 What is Amazon S3?
 
 Simple Storage Service is a scalable and secure cloud storage service provided by Amazon Web Services (AWS). It allows you to store and retrieve any amount of data from anywhere on the web.
@@ -18,7 +21,7 @@ Key benefits of S3 buckets
 
 S3 buckets offer several advantages, including:
 
-    Durability and availability: S3 provides high durability and availability for your data.
+    Durability and availability: S3 provides high durability and availability for your data.you can store upto 5 tb data
     Scalability: You can store and retrieve any amount of data without worrying about capacity constraints.
     Security: S3 offers multiple security features such as encryption, access control, and audit logging.
     Performance: S3 is designed to deliver high performance for data retrieval and storage operations.
