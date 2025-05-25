@@ -9,6 +9,27 @@ An AWS CloudFormation template is a JSON or YAML file that defines the AWS resou
 
 ### 4. How does AWS CloudFormation work?
 AWS CloudFormation interprets templates and deploys the specified resources in the order defined, managing the provisioning, updating, and deletion of resources.
+CFT acts as  a middlelayeer it take info from IAC FOLLOW principal of user(that written ya yaml or json) it convert that into a AWS api calls create a resources acc to that it is not for aws 
+for azyre there is azure cloudFormatiom
+
+two type of template
+1. 📜 Declarative
+You declare what you want, not how to get it.
+
+"What you write is what you get."
+
+Example: If you define an EC2 instance and a VPC, CloudFormation builds exactly that — no scripting needed.
+
+2. 🕒 Versioned
+Templates can be stored in version control systems like Git or S3 buckets.
+
+This lets you:
+
+Track changes over time.
+
+Revert to a version from 5 or 10 days ago.
+
+Use CI/CD pipelines to deploy infrastructure safely
 
 ### 5. What is a CloudFormation stack?
 A CloudFormation stack is a collection of AWS resources created and managed as a single unit, based on a CloudFormation template.
