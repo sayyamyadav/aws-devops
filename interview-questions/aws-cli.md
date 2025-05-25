@@ -57,3 +57,53 @@ You can update the AWS CLI to the latest version using package managers like `pi
 
 ### 20. How do you uninstall the AWS CLI?
 To uninstall the AWS CLI, you can use the package manager or the uninstaller provided by the installer you used to install it initially.
+
+### 21 diff status code in ?
+Sure! Here's a **super simple way** to remember the **API status codes**, like a cheat sheet:
+
+---
+
+## ✅ **STATUS CODE CHEAT SHEET (Easy to Remember)**
+
+### 🟢 **2xx – SUCCESS**
+
+> "Everything worked!"
+
+* **200** – OK (GET or PUT was successful)
+* **201** – Created (POST made something new)
+* **204** – No Content (It worked, but nothing to show)
+
+---
+
+### ❗ **4xx – CLIENT ERROR**
+
+> "You did something wrong."
+
+* **400** – Bad Request (Something's wrong with your input)
+* **401** – Unauthorized (You need to log in)
+* **403** – Forbidden (You’re not allowed)
+* **404** – Not Found (It doesn’t exist)
+* **405** – Method Not Allowed (You used the wrong action)
+* **429** – Too Many Requests (Slow down, you're spamming)
+
+---
+
+### 🔥 **5xx – SERVER ERROR**
+
+> "The server messed up."
+
+* **500** – Internal Error (Generic crash)
+* **502** – Bad Gateway (Server got a bad response)
+* **503** – Service Unavailable (Server is overloaded or down)
+* **504** – Gateway Timeout (Server took too long)
+
+---
+
+### 🧠 Quick Trick to Remember:
+
+* **2xx** = ✅ You did it right
+* **4xx** = ❌ You messed up
+* **5xx** = 💥 Server messed up
+
+---
+
