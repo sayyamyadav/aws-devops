@@ -36,6 +36,7 @@ Yes, Route 53 can route traffic to resources outside of AWS by using the simple 
 
 ### 13. How can you ensure high availability using Route 53?
 Route 53 provides health checks to monitor the health of resources and can automatically fail over to healthy resources in case of failures.
+It routes traffic to a primary resource, like a server or application, and automatically switches (fails over) to a secondary (backup) resource if the primary becomes unavailable.
 
 ### 14. What are health checks in Amazon Route 53?
 Health checks in Route 53 monitor the health and availability of your resources by periodically sending requests and verifying the responses.
